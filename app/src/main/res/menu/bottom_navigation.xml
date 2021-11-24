@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_explorar_24"
+        android:title="@string/menu_1" />
+
+    <item
+        android:id="@+id/nav_pedido"
+        android:icon="@drawable/ic_passagens_24"
+        android:title="@string/menu_2" />
+
+    <item
+        android:id="@+id/nav_pesquisar"
+        android:icon="@drawable/ic_conta_24"
+        android:title="@string/menu_3" />
+
+</menu>

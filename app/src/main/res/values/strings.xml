@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Reist_App</string>
+
+    <string name="menu_1">Explorar</string>
+    <string name="menu_2">Viagens</string>
+    <string name="menu_3">Conta</string>
+
+</resources>
