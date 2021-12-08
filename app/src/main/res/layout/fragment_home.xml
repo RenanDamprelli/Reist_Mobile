@@ -1,14 +1,123 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_pac"
+            android:layout_width="98dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="117dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/btn_home"
+            android:isScrollContainer="false"
+            android:textColor="#3F51B5"
+            app:backgroundTint="@color/btn_home"
+            app:icon="@drawable/ic_beach_24"
+            app:iconGravity="textTop"
+            app:iconSize="50dp"
+            app:iconTint="#2A486B"
+            app:iconTintMode="src_in"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txt_pac"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="Pacotes"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_pac" />
+
+        <TextView
+            android:id="@+id/txt_hot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="64dp"
+            android:layout_marginRight="64dp"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="Hotéis"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_pas"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn_hot" />
+
+    <Button
+        android:id="@+id/btn_hot"
+        android:layout_width="98dp"
+        android:layout_height="83dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
+        android:background="@drawable/btn_home"
+        android:isScrollContainer="false"
+        android:textColor="#3F51B5"
+        app:backgroundTint="@color/btn_home"
+        app:icon="@drawable/ic_hotel_24"
+        app:iconGravity="textTop"
+        app:iconSize="50dp"
+        app:iconTint="#2A486B"
+        app:iconTintMode="src_in"
+        app:layout_constraintEnd_toStartOf="@+id/btn_pas"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+            android:id="@+id/btn_pas"
+            android:layout_width="98dp"
+            android:layout_height="83dp"
+            android:layout_marginTop="117dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginRight="43dp"
+            android:background="@drawable/btn_home"
+            android:isScrollContainer="false"
+            android:textColor="#3F51B5"
+            app:backgroundTint="@color/btn_home"
+            app:icon="@drawable/ic_passagens_24"
+            app:iconGravity="textTop"
+            app:iconSize="50dp"
+            app:iconTint="#2A486B"
+            app:iconTintMode="src_in"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pac"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+        <TextView
+            android:id="@+id/txt_pas"
+            android:layout_width="98dp"
+            android:layout_height="24dp"
+
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginRight="50dp"
+            android:drawablePadding="10dp"
+            android:paddingLeft="10dp"
+            android:text="Passagens"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/txt_pac"
+            app:layout_constraintTop_toBottomOf="@+id/btn_pas" />
 
         <TextView
             android:id="@+id/txt_menu"
@@ -22,7 +131,7 @@
             android:layout_marginRight="281dp"
             android:drawablePadding="10dp"
             android:paddingLeft="10dp"
-            android:text="Menu"
+            android:text="Início"
             android:textSize="18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -39,6 +148,5 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_menu_24"
             tools:ignore="VectorDrawableCompat" />
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.reist_app">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,18 +13,31 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Reist_App">
+        <activity
+            android:name=".Viajantes"
+            android:exported="false" />
+        <activity
+            android:name=".Data_Ida_Volta"
+            android:exported="false" />
+        <activity
+            android:name=".Tipo_Passagem"
+            android:exported="false" />
+        <activity
+            android:name=".Origem"
+            android:exported="false" />
+        <activity
+            android:name=".Destino"
+            android:exported="false" />
+        <activity android:name=".Cadastro" />
         <activity android:name=".Splash">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity"/>
-
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
