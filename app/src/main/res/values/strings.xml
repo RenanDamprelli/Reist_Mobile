@@ -11,4 +11,6 @@
     <string name="btn_apli">Aplicar</string>
     <string name="btn_bus">Buscar</string>
     <string name="btn_com">Comprar</string>
+    <string name="btn_con">Continuar</string>
+    <string name="btn_fin">Finalizar</string>
 </resources>

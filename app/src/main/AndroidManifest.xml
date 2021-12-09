@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Reist_App">
         <activity
+            android:name=".Pagamento_Passagem"
+            android:exported="false" />
+        <activity
             android:name=".Confirmacao_Passagem"
             android:exported="false" />
         <activity

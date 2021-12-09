@@ -15,5 +15,8 @@ public class Voos extends AppCompatActivity {
     }
 
 
-
+    public void onClick(View v) {
+        Intent intent = new Intent(this, Confirmacao_Passagem.class);
+        startActivity(intent);
+    }
 }
