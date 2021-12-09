@@ -10,4 +10,5 @@
     <string name="btn_cad">Cadastrar</string>
     <string name="btn_apli">Aplicar</string>
     <string name="btn_bus">Buscar</string>
+    <string name="btn_com">Comprar</string>
 </resources>

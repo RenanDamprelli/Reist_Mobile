@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Tipo_Passagem">
+
+    <TextView
+        android:id="@+id/txt_ori2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="39dp"
+        android:layout_marginEnd="211dp"
+        android:layout_marginRight="211dp"
+        android:drawablePadding="10sp"
+        android:paddingLeft="10sp"
+        android:text="Tipo de Passagem"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="38dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="39dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_search_24"
+        tools:ignore="VectorDrawableCompat" />
+
+    <Button
+        android:id="@+id/btn_idavolta"
+        android:layout_width="233dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginLeft="89dp"
+        android:layout_marginTop="154dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="89dp"
+        android:layout_marginBottom="71dp"
+        android:background="@drawable/btn_tipo"
+        android:text="Ida e Volta"
+        android:textAllCaps="false"
+        android:textColor="#1B2F47"
+        android:textSize="18sp"
+        app:backgroundTint="#2A486B"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ida"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ori2" />
+
+    <Button
+        android:id="@+id/btn_ida"
+        android:layout_width="233dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="89dp"
+        android:layout_marginLeft="89dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginRight="89dp"
+        android:layout_marginBottom="328dp"
+        android:background="@drawable/btn_tipo"
+        android:text="Somente Ida"
+        android:textAllCaps="false"
+        android:textColor="#1B2F47"
+        android:textSize="18sp"
+        app:backgroundTint="#2A486B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
