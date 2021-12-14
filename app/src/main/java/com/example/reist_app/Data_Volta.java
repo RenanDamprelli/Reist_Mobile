@@ -27,6 +27,11 @@ public class Data_Volta extends AppCompatActivity {
         ida = findViewById(R.id.txtida);
         btn_aplicar = (Button)findViewById(R.id.btn_aplicar);
 
+        String nome = getIntent().getStringExtra("nome");
+        String sigla = getIntent().getStringExtra("sigla");
+        String origem = getIntent().getStringExtra("origem");
+        String idaf = getIntent().getStringExtra("ida");
+
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
 
             @Override
@@ -41,7 +46,13 @@ public class Data_Volta extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                String voltaf = ida.getText().toString();
                 Intent intent = new Intent(Data_Volta.this, Viajantes.class);
+                intent.putExtra("nome", nome);
+                intent.putExtra("sigla", sigla);
+                intent.putExtra("origem", origem);
+                intent.putExtra("ida", idaf);
+                intent.putExtra("volta", voltaf);
                 startActivity(intent);
             }
         });

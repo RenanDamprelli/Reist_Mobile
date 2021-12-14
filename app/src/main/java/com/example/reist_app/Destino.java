@@ -57,8 +57,17 @@ public class Destino extends AppCompatActivity implements LoaderManager.LoaderCa
 
     public void OnClick(View v){
 
-        Intent intent = new Intent(Destino.this, Origem.class);
-        startActivity(intent);
+        if (nmSigla.getText().length() != 0) {
+            String nomef = nmNome.getText().toString();
+            String siglaf = nmSigla.getText().toString();
+
+            Intent intent = new Intent(Destino.this, Origem.class);
+            intent.putExtra("nome", nomef);
+            intent.putExtra("sigla", siglaf);
+            startActivity(intent);
+        }else{
+            nmSigla.setText("Digite um valor válido!");
+        }
     }
 
 

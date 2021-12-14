@@ -50,8 +50,8 @@ public class ProfileFragment extends Fragment {
         String cpf = getArguments().getString("cpf");
 
         View view =  inflater.inflate(R.layout.fragment_profile, container, false);
-        TextView txtnome = (TextView)view.findViewById(R.id.txtnomeprofile);
-        TextView txtcpf = (TextView)view.findViewById(R.id.txtcpfprofile);
+        TextView txtnome = (TextView)view.findViewById(R.id.txt_txtlogin);
+        TextView txtcpf = (TextView)view.findViewById(R.id.txt_txtsenha);
 
         txtnome.setText(nome);
         txtcpf.setText(cpf);

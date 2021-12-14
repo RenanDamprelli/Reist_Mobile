@@ -17,6 +17,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -29,7 +30,7 @@ public class Voos extends AppCompatActivity {
     private TextView nmNome;
     private ProgressBar load;
 
-
+    String passageiros, classe, nome, sigla, origem, ida, volta;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,22 @@ public class Voos extends AppCompatActivity {
 
         load = findViewById(R.id.progressBar3);
 
+        nome = getIntent().getStringExtra("nome");
+        sigla = getIntent().getStringExtra("sigla");
+        origem = getIntent().getStringExtra("origem");
+        ida = getIntent().getStringExtra("ida");
+        volta = getIntent().getStringExtra("volta");
+        classe = getIntent().getStringExtra("classe");
+        passageiros = getIntent().getStringExtra("passageiros");
 
+        nmId.setText(nome);
+        nmSigla.setText(sigla);
+        nmNome.setText(origem);
+
+        //Pode apagar esse toast, ai pra colocar nas textview só pegar esse atributos de cima e setar o text
+        Toast.makeText(this, "Nome: " + nome + "\nSigla: " + sigla +
+                "\nOrigem: " + origem + "\nIda: " + ida + "\nVolta: " + volta +
+                "\nClasse: " + classe + "\nPassageiros: " + passageiros, Toast.LENGTH_LONG).show();
 
     }
 

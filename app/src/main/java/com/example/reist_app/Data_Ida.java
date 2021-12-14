@@ -27,6 +27,10 @@ public class Data_Ida extends AppCompatActivity {
         ida = findViewById(R.id.txtida);
         btn_aplicar = (Button)findViewById(R.id.btn_aplicar);
 
+        String nome = getIntent().getStringExtra("nome");
+        String sigla = getIntent().getStringExtra("sigla");
+        String origem = getIntent().getStringExtra("origem");
+
         calendar.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
 
             @Override
@@ -41,7 +45,13 @@ public class Data_Ida extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+
+                String idaf = ida.getText().toString();
                 Intent intent = new Intent(Data_Ida.this, Data_Volta.class);
+                intent.putExtra("nome", nome);
+                intent.putExtra("sigla", sigla);
+                intent.putExtra("origem", origem);
+                intent.putExtra("ida", idaf);
                 startActivity(intent);
             }
         });
