@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -59,6 +61,16 @@ public class ProfileFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false);
+        String nome = getArguments().getString("nome");
+        String cpf = getArguments().getString("cpf");
+
+        View view =  inflater.inflate(R.layout.fragment_profile, container, false);
+        TextView txtnome = (TextView)view.findViewById(R.id.txtnomeprofile);
+        TextView txtcpf = (TextView)view.findViewById(R.id.txtcpfprofile);
+
+        txtnome.setText(nome);
+        txtcpf.setText(cpf);
+
+        return view;
     }
 }

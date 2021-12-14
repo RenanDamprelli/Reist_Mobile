@@ -8,7 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-import com.example.reist_app.models.User;
+import com.example.reist_app.models.Usuario;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,15 +20,17 @@ public class DBHelper extends SQLiteOpenHelper {
 
     //TABELA USUARIO
     public static final String USUARIO_TABLE_NAME = "TBUsuario";
-    public static final String USUARIO_COLUMN_ID = "idUsuario";
-    public static final String USUARIO_COLUMN_NAME = "nomeUsuario";
-    public static final String USUARIO_COLUMN_EMAIL = "emailUsuario";
-    public static final String USUARIO_COLUMN_TEL = "telUsuario";
-    public static final String USUARIO_COLUMN_CEP = "cepUsuario";
-    public static final String USUARIO_COLUMN_LOGRADOURO = "logUsuario";
-    public static final String USUARIO_COLUMN_COMPLEMENTO = "comUsuario";
-    public static final String USUARIO_COLUMN_NUMBER = "numberUsuario";
-    public static final String USUARIO_COLUMN_SENHA = "senhaUsuario";
+    public static final String USUARIO_COLUMN_ID = "id";
+    public static final String USUARIO_COLUMN_CPF = "cpf";
+    public static final String USUARIO_COLUMN_NAME = "nome";
+    public static final String USUARIO_COLUMN_EMAIL = "email";
+    public static final String USUARIO_COLUMN_SENHA = "senha";
+    public static final String USUARIO_COLUMN_CELL = "celular";
+    public static final String USUARIO_COLUMN_SEXO = "sexo";
+    public static final String USUARIO_COLUMN_NASC = "nascimento";
+    public static final String USUARIO_COLUMN_NUMERO = "numero";
+    public static final String USUARIO_COLUMN_CEP = "cep";
+
 
     public DBHelper(@Nullable Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -36,9 +38,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String QUERY_USUARIO = "CREATE TABLE TBUsuario ( idUsuario INTEGER PRIMARY KEY, nomeUsuario  TEXT, " +
-                "emailUsuario  TEXT,  telUsuario TEXT, senhaUsuario TEXT, " +
-                "cepUsuario TEXT, logUsuario TEXT, comUsuario TEXT, numberUsuario INTEGER); ";
+        String QUERY_USUARIO = "CREATE TABLE TBUsuario ( id INTEGER PRIMARY KEY, cpf  INTEGER, " +
+                "nome  TEXT,  email TEXT, senha TEXT, " +
+                "celular TEXT, sexo TEXT, nascimento TEXT, numero INTEGER, cep TEXT); ";
 
         db.execSQL(QUERY_USUARIO);
     }
@@ -50,29 +52,29 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //-----------------INSERTS----------------------------------------------------------------------
-   public void addUsuario (User usuario){
+    public void addUsuario (Usuario usuario){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(USUARIO_COLUMN_NAME, usuario.getNomeUser());
-        values.put(USUARIO_COLUMN_EMAIL, usuario.getEmailUser());
-        values.put(USUARIO_COLUMN_TEL, usuario.getTelUser());
-        values.put(USUARIO_COLUMN_SENHA, usuario.getSenhaUser());
-        values.put(USUARIO_COLUMN_CEP, usuario.getCepUser());
-        values.put(USUARIO_COLUMN_LOGRADOURO, usuario.getLogUser());
-        values.put(USUARIO_COLUMN_COMPLEMENTO, usuario.getComplementoUser());
-        values.put(USUARIO_COLUMN_NUMBER, usuario.getNumUser());
+        values.put(USUARIO_COLUMN_CPF, usuario.getCpfusuario());
+        values.put(USUARIO_COLUMN_NAME, usuario.getNomeusuario());
+        values.put(USUARIO_COLUMN_EMAIL, usuario.getEmailusuario());
+        values.put(USUARIO_COLUMN_SENHA, usuario.getSenhausuario());
+        values.put(USUARIO_COLUMN_CELL, usuario.getCelularusuario());
+        values.put(USUARIO_COLUMN_SEXO, usuario.getSexousuario());
+        values.put(USUARIO_COLUMN_NASC, usuario.getNascimentousuario());
+        values.put(USUARIO_COLUMN_NUMERO, usuario.getNumerousuario());
+        values.put(USUARIO_COLUMN_CEP, usuario.getCepusuario());
 
-
-       db.insert(USUARIO_TABLE_NAME, null, values);
+        db.insert(USUARIO_TABLE_NAME, null, values);
         db.close();
     }
 
     //-----------------UPDATES----------------------------------------------------------------------
 
     //----------------SELECTS ALL-------------------------------------------------------------------
-    public List<User> listAllUsers (){
-        List<User> listaU    = new ArrayList<User>();
+    public List<Usuario> listAllUsers (){
+        List<Usuario> listaU    = new ArrayList<Usuario>();
         String query = "SELECT * FROM " + USUARIO_TABLE_NAME;
         SQLiteDatabase db = this.getWritableDatabase();
 
@@ -80,16 +82,16 @@ public class DBHelper extends SQLiteOpenHelper {
 
         if(c.moveToFirst()){
             do{
-                User cliente = new User();
-                cliente.setIdUser(Integer.parseInt(c.getString(0)));
-                cliente.setNomeUser(c.getString(1));
-                cliente.setEmailUser(c.getString(2));
-                cliente.setTelUser(c.getString(3));
-                cliente.setSenhaUser(c.getString(4));
-                cliente.setCepUser(c.getString(5));
-                cliente.setLogUser(c.getString(5));
-                cliente.setComplementoUser(c.getString(5));
-                cliente.setNumUser(c.getString(5));
+                Usuario cliente = new Usuario();
+                cliente.setCpfusuario(Integer.parseInt(c.getString(1)));
+                cliente.setNomeusuario(c.getString(2));
+                cliente.setEmailusuario(c.getString(3));
+                cliente.setSenhausuario(c.getString(4));
+                cliente.setCelularusuario(c.getString(5));
+                cliente.setSexousuario(c.getString(6));
+                cliente.setNascimentousuario(c.getString(7));
+                cliente.setNumerousuario(Integer.parseInt(c.getString(8)));
+                cliente.setCepusuario(c.getString(9));
 
                 listaU.add(cliente);
             }while(c.moveToNext());
@@ -98,14 +100,14 @@ public class DBHelper extends SQLiteOpenHelper {
     }
 
     //----------------SELECT WHERE------------------------------------------------------------------
-    public boolean autenticaUsuario(User usuario){
+    public boolean autenticaUsuario(Usuario usuario){
         SQLiteDatabase db = this.getReadableDatabase();
         String sql_busca_usuario =
-                "SELECT * FROM " + USUARIO_TABLE_NAME + " WHERE " + USUARIO_COLUMN_EMAIL + " = " + "'" + usuario.getNomeUser() + "'";
+                "SELECT * FROM " + USUARIO_TABLE_NAME + " WHERE " + USUARIO_COLUMN_EMAIL + " = " + "'" + usuario.getEmailusuario() + "'";
         Cursor c = db.rawQuery(sql_busca_usuario, null);
         while(c.moveToNext()){
-            if(usuario.getNomeUser().equals(c.getString(c.getColumnIndex(USUARIO_COLUMN_EMAIL)))){
-                if(usuario.getSenhaUser().equals(c.getString(c.getColumnIndex(USUARIO_COLUMN_SENHA)))){
+            if(usuario.getEmailusuario().equals(c.getString(c.getColumnIndex(USUARIO_COLUMN_EMAIL)))){
+                if(usuario.getSenhausuario().equals(c.getString(c.getColumnIndex(USUARIO_COLUMN_SENHA)))){
                     return true;
                 }
 
