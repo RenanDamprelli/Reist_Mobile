@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private AlertDialog dialog;
     private TextView telefone, email, localizacao, result;
 
+    String nome, cpf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
 
         BottomNavigationView bottomNav = findViewById(R.id.nav_view);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
+
+        if (getIntent().hasExtra("nomeuser") && getIntent().hasExtra("cpfuser")){
+            nome = getIntent().getStringExtra("nomeuser");
+            cpf = getIntent().getStringExtra("cpfuser");
+        }
 
 
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
@@ -52,7 +58,11 @@ public class MainActivity extends AppCompatActivity {
                             break;
 
                         case R.id.nav_perfil:
+                            Bundle bundle = new Bundle();
+                            bundle.putString("nome", nome);
+                            bundle.putString("cpf", cpf);
                             fragSelecionada = new ProfileFragment();
+                            fragSelecionada.setArguments(bundle);
                             break;
 
                     }
