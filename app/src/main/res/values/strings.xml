@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">Reist_App</string>
 
+    <string name="input_hint">ID jogador...</string>
+
+    <string name="loading">Buscando...</string>
+
+    <string name="no_results">"Nenhum resultado encontrado"</string>
+
+    <string name="no_search_term">Informe um ID válido</string>
+
+    <string name="no_network">Sem conexão:(</string>
+    <string name="str_empty">" "</string>
+
+
     <string name="menu_1">Explorar</string>
     <string name="menu_2">Viagens</string>
     <string name="menu_3">Conta</string>

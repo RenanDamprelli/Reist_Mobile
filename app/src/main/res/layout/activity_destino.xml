@@ -6,6 +6,64 @@
     android:layout_height="match_parent"
     tools:context=".Destino">
 
+    <Button
+
+        android:id="@+id/btnBusca"
+
+        android:layout_width="65dp"
+
+        android:layout_height="45dp"
+
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="68dp"
+        android:layout_marginRight="68dp"
+        android:background="@drawable/button_search2"
+        android:backgroundTint="#ffff"
+        android:drawableLeft="@drawable/ic_search"
+        android:onClick="buscarDest"
+        app:backgroundTint="#002C8730"
+        app:icon="@drawable/ic_search_24"
+        app:iconSize="30dp"
+        app:iconTint="#2A486B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+
+        android:id="@+id/txtsigla"
+
+        android:layout_width="249dp"
+
+        android:layout_height="20dp"
+
+        android:layout_marginTop="104dp"
+        android:onClick="OnClick"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="#4E4E4E"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtdes" />
+
+    <TextView
+
+        android:id="@+id/txtnome"
+
+        android:layout_width="288dp"
+
+        android:layout_height="65dp"
+        android:textAllCaps="false"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        android:textColor="#808080"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.435"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtsigla" />
+
     <TextView
         android:id="@+id/txt_des"
         android:layout_width="wrap_content"
@@ -48,6 +106,7 @@
         android:background="@drawable/btn_passagens"
         android:ems="10"
         android:inputType="textPostalAddress"
+        android:onClick="buscarPlayer"
         android:paddingLeft="10dp"
         android:paddingRight="1dp"
         android:text=""
@@ -58,16 +117,21 @@
         app:layout_constraintTop_toBottomOf="@+id/txt_des"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ListView
-        android:layout_width="378dp"
-        android:layout_height="344dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
-        android:layout_marginBottom="198dp"
+    <ProgressBar
+        android:id="@+id/progressBar2"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="56dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginRight="178dp"
+        android:layout_marginBottom="240dp"
+        android:indeterminateDrawable="@drawable/progress2"
+        android:indeterminateDuration="@android:integer/config_longAnimTime"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

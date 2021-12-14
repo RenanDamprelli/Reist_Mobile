@@ -89,13 +89,13 @@
         android:text="Passageiros"
         android:textColor="#555555"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/btn_mais"
         app:layout_constraintHorizontal_bias="0.045"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button6" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtpass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -104,30 +104,32 @@
         android:text="1"
         android:textColor="#555555"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/btn_menos"
         app:layout_constraintTop_toTopOf="@+id/button6"
         tools:ignore="MissingConstraints" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_mais"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/ic_add_circle_24"
+        android:onClick="Mais"
         app:backgroundTint="#2A486B"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintEnd_toStartOf="@+id/txtpass"
         app:layout_constraintTop_toTopOf="@+id/button6" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btn_menos"
         android:layout_width="24dp"
         android:layout_height="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
         android:background="@drawable/ic_remove_circle_24"
+        android:onClick="Menos"
         app:backgroundTint="#2A486B"
         app:layout_constraintEnd_toEndOf="@+id/button6"
         app:layout_constraintTop_toTopOf="@+id/button6" />
@@ -165,39 +167,30 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button4" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="118dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/btn_geral"
-        android:text="Classe Econômica"
-        android:textAllCaps="false"
-        android:textSize="10sp"
-        app:backgroundTint="#2A486B"
-        app:layout_constraintStart_toStartOf="@+id/button4"
-        app:layout_constraintTop_toTopOf="@+id/button4"
-        tools:ignore="MissingConstraints" />
-
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="118dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="2dp"
-        android:layout_marginLeft="2dp"
-        android:layout_marginTop="68dp"
-        android:background="@drawable/btn_passagens"
-        android:text="Classe Executiva"
-        android:textAllCaps="false"
-        android:textColor="#2A486B"
-        android:textSize="10sp"
-        app:backgroundTint="#2A486B"
+    <RadioGroup
+        android:layout_width="289dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="26dp"
+        android:buttonTint="@color/btn_geral"
+        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="0.666"
-        app:layout_constraintStart_toEndOf="@+id/button7"
-        app:layout_constraintTop_toTopOf="@+id/button4"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toBottomOf="@+id/txt_ori7">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="146dp"
+            android:layout_height="wrap_content"
+            android:text="Classe Econômica"
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:text="Classe Executiva"
+            android:textColorLink="#FFC107"
+            android:textSize="13sp" />
+    </RadioGroup>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

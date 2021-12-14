@@ -11,25 +11,31 @@
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/btn_home.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/btn_menos.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/btn_passagens.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/btn_passagens_2.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/btn_tipo.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/button_search2.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_add_circle_24.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_calendar_24.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_menu_24.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_passagens_24.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_person_24.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_remove_circle_24.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_search.xml" value="0.17395833333333333" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_search_24.xml" value="0.3828125" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/ic_settings_24.xml" value="0.3828125" />
-        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_cadastro.xml" value="0.36666666666666664" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/drawable/progress2.xml" value="0.3828125" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_cadastro.xml" value="0.33" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_confirmacao_passagem.xml" value="0.33" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_data_ida.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_data_ida_volta.xml" value="0.36666666666666664" />
-        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_destino.xml" value="0.33" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_data_volta.xml" value="0.36666666666666664" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_destino.xml" value="0.5" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_origem.xml" value="0.36666666666666664" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_pagamento_passagem.xml" value="0.33" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_tipo_passagem.xml" value="0.33" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_viajantes.xml" value="0.33" />
-        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_voos.xml" value="0.33" />
+        <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/activity_voos.xml" value="0.5" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/fragment_home.xml" value="0.5474339035769828" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/fragment_homes.xml" value="0.20416666666666666" />
         <entry key="..\:/GitHub/Reist_App/app/src/main/res/layout/fragment_profile.xml" value="0.35260416666666666" />
